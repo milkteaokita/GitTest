@@ -1,0 +1,63 @@
+name: Skills 問題回報
+description: 回報 skills 的問題或變更需求
+title: "[Skills] "
+labels:
+  - skills
+body:
+  - type: dropdown
+    id: system
+    attributes:
+      label: 系統別
+      description: 請選擇你的系統別。
+      options:
+        - NCW
+        - NEC
+        - NCF
+        - NRA
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: latest-skills
+    attributes:
+      label: 版本確認
+      options:
+        - label: 我已使用最新版本 skills
+          required: true
+
+  - type: dropdown
+    id: skill
+    attributes:
+      label: 回報的 skills
+      description: 請選擇你要反應的 skills。
+      options:
+        - unit-test
+        - qc
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 問題描述
+      description: 請先確保你的 skills 是最新版本，且確保你的問題不包含在其他人已提交的問題上。
+      placeholder: 請詳細描述你遇到的問題。
+    validations:
+      required: true
+
+  - type: textarea
+    id: changeset
+    attributes:
+      label: 變更集
+      description: 請輸入你的變更集。
+      placeholder: 請輸入變更集內容。
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: 確認事項
+      options:
+        - label: 我已搜尋現有 Issue，確認此問題未被提出過
+          required: true
