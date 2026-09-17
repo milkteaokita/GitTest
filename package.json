@@ -1,0 +1,16 @@
+{
+  "name": "git-test-qc-skill",
+  "version": "1.0.0",
+  "description": "Install the qc GitHub Copilot skill and custom agent",
+  "bin": {
+    "install-qc-skill": "bin/install.js"
+  },
+  "files": [
+    "bin",
+    ".github/agents/qc.agent.md",
+    ".github/skills/qc/SKILL.md"
+  ],
+  "engines": {
+    "node": ">=18"
+  }
+}
